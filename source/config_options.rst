@@ -162,6 +162,8 @@ SHARES\_DEFAULT
 
 The default SMB share to connect to when a user logs in.
 
+.. _CONFIG_LOCAL_TEMPLATE_DIR:
+
 LOCAL\_TEMPLATE\_DIR
 ~~~~~~~~~~~~~~~~~~~~
 
@@ -199,14 +201,22 @@ The shortened version of the application wide display name.
 LOGIN\_IMAGE\_RANDOM\_MAX
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
+**This config option is deprecated and REMOVED in 1.4**
+
 -  **Required**: No
 -  **Expected value**: Integer
 -  **Type**: Bargate specific config option
 -  **Default**: 17
+-  **Removed**: 1.4
 
 The default login page (which you don't have to use) sets a background
 image from a pool of images based on a random number. This option sets
 the upper bounds on that random number.
+
+This option has been removed in version 1.4 and is replaced by Jinja template
+filters, e.g::
+
+  {{range(1,17)|random}}
 
 IMAGE\_PREVIEW
 ~~~~~~~~~~~~~~
@@ -426,6 +436,8 @@ but the SMB server is.
 
 Two factor authentication
 -------------------------
+
+**Please note:** Two factor authentication support is considered EXPERIMENTAL.
 
 TOTP\_ENABLED
 ~~~~~~~~~~~~~
