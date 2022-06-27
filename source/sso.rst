@@ -25,6 +25,5 @@ Sadly, this means Bargate still needs your password. Long term the idea is to
 switch to using websockets, and thus remove the need to store a password 
 on the client, but it will still need the password for the initial connection.
 
-A limited form of 'Single Sign On' is being prototyped by the University of 
-Sheffield where a central portal maintains a copy of the user's password and is
+A limited form of 'Single Sign On' is being prototyped where a central portal maintains a copy of the user's password and is
 thus able to sign the user into bargate. 
